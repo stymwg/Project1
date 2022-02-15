@@ -2,7 +2,7 @@
 ##Requires access to ssh server 10.102.161.8 - use command: ssh -i putty_key your_username@10.102.161.8
 ##General Info
 Short-read scripts (called SR_SX_script) assemble Illumina data into complete assemblies.
-Completed short-read assemblies for our five samples can be found in the Short Reads branch under notation assembly_SR_SX.fasta (X= sample identity)
+Completed short-read assemblies for our five samples can be found in the Short Reads branch under notation assembly_SX_SR.fasta (X= sample identity)
 Pilon Polished assemblies can also be found in the repository under notation polished_assembly_SR_SX.fasta
 Long-read scripts (beginning) assemble Nanopore data into complete assemblies.
 Completed long-read assemblies of passed reads for our five samples can be found in the Long Reads branch under notation assembly_LR_SX.fasta
