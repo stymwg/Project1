@@ -1,16 +1,23 @@
 # Project1
 ##Requires access to ssh server 10.102.161.8 - use command: ssh -i putty_key your_username@10.102.161.8
-##General Info
+##General Info - Short Reads
 Short-read scripts (called SR_SX_script) assemble Illumina data into complete assemblies.
-Completed short-read assemblies for our five samples can be found in the Short Reads branch under notation assembly_SX_SR.fasta (X= sample identity)
-Pilon Polished assemblies can also be found in the repository under notation polished_assembly_SR_SX.fasta
+Completed short-read assemblies for our five samples can be found in the Short-Reads branch under notation assembly_SX_SR.fasta (X=sample identity)
+The QC for each assembly can be found under notation QC_SX_SR.txt. The scripts used to produce these QC outputs can be found under notation 
+Pilon Polished assemblies can also be found in the repository under notation polished_assembly_SR_SX.fasta.
+The QC for each polished assembly can be found under notation QC_polishedSX_SR.txt. The scripts used to produce these QC outputs can be found under notation
+
+##General Info - Long Reads
 Long-read scripts (beginning) assemble Nanopore data into complete assemblies.
-Completed long-read assemblies of passed reads for our five samples can be found in the Long Reads branch under notation assembly_LR_SX.fasta
+Completed long-read assemblies of passed reads for our five samples can be found in the Long-Reads branch under notation assembly_LR_SX.fasta
 Medaka Polished assemblies can also be found within the repository under notation medaka_assembly_LR.SX.fasta
+
+##General Info - Hybrid
 Hybrid scripts assemble both short and long-read data into complete assemblies.
 Our one example hybrid assembly for sample five is entitled XXXX, and can be found in the Hybrid branch.
-Prokka Genome annotations can also be found within the Prokka branch of this repository, for all of our assemblies.
 
+##General Info - Prokka
+Prokka Genome annotations can also be found within the Prokka branch of this repository, for all of our assemblies.
 
 ##Prerequisites
 You have installed the correct versions of Unicycler (our short-read and hybrid assembler), FLYE (our long-read assembler), Medaka (our long-read polisher), QUAST (our short-read QC tool) and PROKKA (our genome annotator).
