@@ -8,9 +8,11 @@ Pilon Polished assemblies can also be found in the repository under notation pol
 The QC for each polished assembly can be found under notation QC_polishedSX_SR.txt. The scripts used to produce these QC outputs can be found under notation
 
 ##General Info - Long Reads
-Long-read scripts (beginning) assemble Nanopore data into complete assemblies.
-Completed long-read assemblies of passed reads for our five samples can be found in the Long-Reads branch under notation assembly_LR_SX.fasta
+Long-read scripts (called SX_pass_only.sh) assemble Nanopore data into complete assemblies.
+Completed long-read assemblies of passed reads for our five samples can be found in the Long-Reads branch under notation assembly_LR_SX.fasta.
+The QC for each assembly can be found under notation QC_SX_LR.txt. The scripts used to produce these QC outputs can be found under notation 
 Medaka Polished assemblies can also be found within the repository under notation medaka_assembly_LR.SX.fasta
+The QC for each polished assembly can be found under notation QC_medakaSX_LR.txt. The scripts used to produce these QC outputs can be found under notation
 
 ##General Info - Hybrid
 Hybrid scripts assemble both short and long-read data into complete assemblies.
