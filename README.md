@@ -12,8 +12,7 @@ Ensure the working directory within the server is shared/
 ##Setup
 Run the following command in Unix: sbatch [the name of script you wish to run]
 ##Technologies
-Unix Version
-Unicycler Version
+Unicycler Version: v0.4.8
 FLYE version
 Medaka version
 Prokka Version
