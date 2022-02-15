@@ -26,10 +26,11 @@ Ensure the working directory within the server is shared/
 ##Setup
 Run the following command in Git Bash: sbatch [the name of script you wish to run - for short reads, this is SR_SX_script. For long reads, this is XXX. For hybrid scripts this is]
 ##Technologies
+Python version: 3.7.11
 Unicycler Version: v0.4.8
-FLYE version
-Medaka version
-Prokka Version
+FLYE version: Flye 2.9-b1774
+Medaka version:
+Prokka Version:
 ##ChangeLog
 ...
 ##Contributors
