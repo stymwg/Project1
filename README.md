@@ -16,7 +16,8 @@ The QC for each polished assembly can be found under notation QC_medakaSX_LR.txt
 
 ##General Info - Hybrid
 Hybrid scripts assemble both short and long-read data into complete assemblies.
-Our one example hybrid assembly for sample five is entitled XXXX, and can be found in the Hybrid branch.
+Our one example hybrid assembly for sample five is entitled hybrid_S5.fasta, and can be found in the Hybrid branch.
+The script used to produce this hybrid assembly is called hybrid_S5.sh.
 
 ##General Info - Prokka
 Prokka Genome annotations can also be found within the Prokka branch of this repository, for all of our assemblies.
@@ -26,7 +27,7 @@ You have installed the correct versions of Unicycler (our short-read and hybrid 
 You have two folders, one containing short-read Illumina data and the other containing long-read Nanopore data.
 Ensure the working directory within the server is shared/
 ##Setup
-Run the following command in Git Bash: sbatch [the name of script you wish to run - for unpolished and polished short reads, this is SR_SX_script.sh. For unpolished long reads, this is SX_pass_only.sh. For polished long reads, this is medaka_LR_SX.sh. For hybrid scripts this is]
+Run the following command in Git Bash: sbatch [the name of script you wish to run - for unpolished and polished short reads, this is SR_SX_script.sh. For unpolished long reads, this is SX_pass_only.sh. For polished long reads, this is medaka_LR_SX.sh. For hybrid scripts this is hybrid_S5]
 ##Technologies
 Python version: 3.7.11
 Unicycler Version: v0.4.8
