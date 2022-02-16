@@ -31,8 +31,8 @@ Run the following command in Git Bash: sbatch [the name of script you wish to ru
 ##Technologies
 Python version: 3.7.11
 Unicycler Version: v0.4.8
-FLYE version: Flye 2.9-b1774
-Medaka version:
+FLYE version: 2.9-b1774
+Medaka version: 1.5.0
 Prokka Version:
 ##ChangeLog
 ...
