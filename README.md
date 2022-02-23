@@ -34,6 +34,8 @@ Unicycler Version: v0.4.8
 FLYE version: 2.9-b1774
 Medaka version: 1.5.0
 Prokka Version:
+GitBash version:
+Conda version: 4.11.0
 ##ChangeLog
 ...
 ##Contributors
