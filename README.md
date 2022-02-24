@@ -30,8 +30,8 @@ QC reports for our unpolished and polished hybrid assemblies can be located unde
 
 ##General Info - Master
 The master script can be located in the repository as masterscript.sh.
-Choose which method of assembly you wish to use - there are four potential approaches (and scripts - short-read, long-read, long-read with polishing, hybrid!)
-Delete the remaining three scripts to isolate your chosen method.
+Choose which method of assembly or quality control you wish to use - there are six potential approaches (and scripts - short-read, long-read pass only, long-read pass/fail, long-read pass only with polishing, hybrid, QC script)
+Delete the remaining five scripts to isolate your chosen method.
 Run the following command in Git Bash: sbatch [the name of script you wish to run - for example to run the master script, this is master_script.sh.]
 
 ##Prerequisites You have installed the correct versions of Unicycler (our short-read and hybrid assembler), FLYE (our long-read assembler), Medaka (our long-read polisher) and QUAST (our QC tool). You have two folders, one containing short-read Illumina data and the other containing long-read Nanopore data. Ensure the working directory within the server is shared/
