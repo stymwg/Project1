@@ -8,7 +8,7 @@ Unpolished short read assemblies can be found under assembly_SR_SX.fasta notatio
 
 ##General Info - Long Reads
 
-Long-read Nanopore pass data can be input into our long-read scripts (under notation SX_pass_only.sh) to produce unpolished long-read assemblies - examples of which can be found under pass_only_assembly_LR_SX.fasta notation. 
+Long-read Nanopore pass data can be input into our long-read scripts (under notation SX_pass_only.sh) to produce unpolished long-read assemblies - examples of which can be found under SX_pass_only.fasta notation. 
 Both pass and fail long-read data can also be input together into long-read scripts located under notation SX_passandfail.sh.
 Our assemblies constructed using both pass and fail data can be found under passfail_assembly_LR.SX.fasta notation.
 Long-read assemblies can be polished using Medaka - simply input the filepath to your assemblies and Nanopore data to one of our example scripts - pass only polishing scripts are located under notation medaka_LR_SX.sh, whilst pass-fail polishing scripts are located under notation medaka_passfail_LR_SX.sh.
