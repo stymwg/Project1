@@ -10,7 +10,7 @@ Long-read scripts (called SX_pass_only.sh) assemble Nanopore data into complete 
 
 ##General Info - Hybrid
 
-Hybrid scripts assemble both short and long-read data into complete assemblies. Our hybrid assemblies for samples one and five can be found in the Hybrid branch. The script used to produce this hybrid assembly is called hybrid_S5.sh.
+Hybrid scripts assemble both short and long-read data into complete assemblies. Our hybrid assemblies for samples one and five can be found in the Hybrid branch. The scripts used to produce these hybrid assemblies are called hybrid_SX.sh. QC FOR HYBRIDs enter text here
 
 ##General Info - Master
 
