@@ -1,0 +1,112 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+###Short Read Script
+
+Change the jobname variable to a name of your choice 
+
+Change the directories after the output and error variables to your chosen file output and add %x.out and %x.err to the end of the paths 
+
+After 'conda activate', change the name of the path to the path to your conda environment.
+
+After 'unicycler -1', change the file path to where your  concatenated short-read first mate file is located.
+Short-reads from all four lanes must be concatenated using the command(if your sequence is in multiple files you must 
+cat file1 file2 file3 file 4> new_sequence_file, then use the new_sequence_file path to this catted file after 'unicycler -l'
+
+After '-2', add the path to your second mate short-read file, which must also be a concatenated file of all four lane reads 
+
+Change the path after '-o' to your output directory.
+
+These instructions and script examples can be repeated with other sequence files to produce multiple short read assemblies 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+###Flye Long-Read Pass Only Script
+The conda enviroment for this script is provided in a yml file. Use conda env create --file envname.yml to create your own enviroment, then change the conda file path in the script 
+
+One prerequisite for this script is that Flye is installed. 
+
+After 'python' on the final line of the script, give the path where /Flye/bin/flye is installed.
+
+After '--nanohq' on the final line of the script, give the path your barcode data (all barcode files for each sample must be located in one folder)
+
+Finally, after --out-dir give the file path to your chosen output location 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+###Flye Long-Read Polishing PassOnly Script
+This script polishes long-read assemblies constructed using only pass Nanopore data
+
+Change the jobname variable to a name of your choice 
+
+Change the directories after the output and error variables to your chosen file output, and add %x.out and %x.err to the end of the paths 
+
+The conda environment containing our long-read polishing tool medaka is provided in a yml file.
+
+Use conda env create --file envname.yml to create your own environment, then change the conda file path in the script to the provided yml file.
+
+After 'medaka_consensus -d', insert the file pathe to your previous long-read assembly 
+
+After '-i',, insert the file path to the original long-read pass data used to construct your previous long-read assembly (see previous script)
+
+Finally, after '-o' give the file path to your chosen output location 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////
+###Flye Pass/Fail Long-Read Assembly Script
+
+This script constructs a long-read assembly from both pass and fail Nanopore data
+
+Change the jobname variable to a name of your choice 
+
+Change the directories after the output and error variables to your chosen file output, and add %x.out and %x.err to the end of the paths
+
+After 'python' on the final line of code, give the path where /Flye/bin/flye is installed.
+
+After '--nano-hq', insert the path to your pass data for sequence. Finish this path with a * to read in all your passed long-read files for the sample. Then write in your fail data in an identical manner.
+
+Finally, after '--out-dir' give the file path to your chosen output location
+
+////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+###Hybrid Assembly Script
+///////////////////////////////////////////////////////////////////////
+Hybrid assembly construct genomes using both (pass only) long- and short-read data, and therefore requires more computing power than previous assemblies.
+
+Change the jobname variable to a name of your choice 
+
+Change the directories after the output and error variables to your chosen file output, and add %x.out and %x.err to the end of the paths
+
+After '-1' and '-2' in the last line of code, write in your concatenated file for all R1 and R2 lanes respectively
+
+After '-l', write in the file path to your merged pass only long read data. This merged pass only data can be generated using the cat command to concatenate long-read files from each sample 
+
+After '-o' give the file path to your chosen output location
+
+After your chosen output file path, use the below command to write in your file path:
+--spades_tmp_dir /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/spades_assembly/read_correction/tmp
+
+This will enable you to run the hybrid assembly
+
+///////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+###QC script
+
+In order to run this script, .yml files will be provided
+
+Change the jobname variable to a name of your choice 
+
+Change the directories after the output and error variables to your chosen file output, and add %x.out and %x.err to the end of the paths
+
+Memory and time settings are suitable for this script provided it is run on the .8 node of the 10.102.161 server, not the .7  node 
+
+Change the path after 'conda activate' to the file path to the provided yml file
+
+The main command line starts with quast - this will call the program 
+
+After '-r', which is the reference file, insert the file path to the reference genome given in the example.
+
+Everything following '--labels' are the names given to the columns in the output quast report. Simply change these lables to the sequences that you are investigating 
+
+After '-- glimmer', insert the assembly you wish to assess the quality of - in our group we used the '*' wild card to read in all files simultaneously
+
+After '-o', give your chosen output directory - use a simple and short file path so that you don't get lost :)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////

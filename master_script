@@ -1,0 +1,120 @@
+///////////////
+Short Read Script
+/////////////////
+
+#!/bin/bash
+#SBATCH --job-name=S1_Unicycler 
+#SBATCH --partition=hpc 
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=15g
+#SBATCH --time=24:00:00
+#SBATCH --output=/shared/Project1_Resources/GROUP2_Workspace/%x.out
+#SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/%x.err
+
+source $HOME/.bash_profile
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV
+ 
+unicycler -1 /shared/home/mbxlw2/Unicycler/S1/H164_S1_ALL_R1_001.fastq.gz \n
+-2 /shared/home/mbxlw2/Unicycler/S1/H164_S1_ALL_R2_001.fastq.gz -o /shared/Project1_Resources/GROUP2_Workspace/H164_S1_ALL_lanes
+
+
+//////////////////////////////
+Flye Long-Read Pass Only
+/////////////////////
+
+#!/bin/bash
+#SBATCH --job-name=S1_pass_only_flye
+#SBATCH --partition=hpc
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=3g
+#SBATCH --time=05:00:00
+#SBATCH --output=/shared/Project1_Resources/GROUP2_Workspace/lewis_flye/slurm.out
+#SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/lewis_flye/slurm.err
+
+source $HOME/.bash_profile
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/flye
+
+python /shared/home/mbxlw2/Flye/bin/flye --nano-hq /shared/home/mbxlw2/Flye/pass_data/barcode01/* --out-dir /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/test
+
+/////////////////
+Flye long read polishing script
+//////////////////
+
+#!/bin/bash
+#SBATCH --job-name=polishing
+#SBATCH --partition=hpc
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=15g
+#SBATCH --time=24:00:00
+#SBATCH --output=/shared/Project1_Resources/GROUP2_Workspace/%x.out
+#SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/%x.err
+
+
+source $HOME/.bash_profile
+
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/medaka
+
+medaka_consensus -d /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/pass/barcode_1_fastq_pass/assembly.fasta -i /shared/home/mbxlw2/Flye/pass_data/barcode01/* -o /shared/Project1_Resources/GROUP2_Workspace/lewis_long_polishing -t 4 -m r941_min_hac_g507
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////
+Flye pass/fail long-read assembly script
+/////////////////////////////////
+#!/bin/bash
+#SBATCH --job-name=S1_pass_fail_flye
+#SBATCH --partition=hpc
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=15g
+#SBATCH --time=05:00:00
+#SBATCH --output=/shared/Project1_Resources/GROUP2_Workspace/lewis_flye/barcode_1_fastq_fail/slurm.out
+#SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/lewis_flye/barcode_1_fastq_fail/slurm.err
+
+source $HOME/.bash_profile
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/flye
+
+python /shared/home/mbxlw2/Flye/bin/flye --nano-hq /shared/home/mbxlw2/Flye/pass_data/barcode01/* /shared/home/mbxlw2/Flye/fail_data/barcode01/* --out-dir /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/barcode_1_fastq_fail
+///////////////////////
+hybrid assembly script 
+///////////////////////
+
+#!/bin/bash
+#SBATCH --job-name=S5_hybrid_pass
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=15g
+#SBATCH --time=48:00:00
+#SBATCH --output=/shared/Project1_Resources/GROUP2_Workspace/hybrid_test/%x.out
+#SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/hybrid_test/%x.err
+
+source $HOME/.bash_profile
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV
+
+unicycler -1 /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/H1804_S5_ALL_R1_001.fastq.gz -2 /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/H1804_S5_ALL_R2_001.fastq.gz -l /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/S5_merged_pass_only.fastq.gz -o /shared/Project1_Resources/GROUP2_Workspace/hybrid_test --spades_tmp_dir /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/spades_assembly/read_correction/tmp
+//////////////////////
+QC script 
+/////////////////////
+#!/bin/bash
+#SBATCH --job-name=PassQC
+#SBATCH --partition=hpc
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=4g
+#SBATCH --time=06:00:00
+#SBATCH --output=/shared/Project1_Resources/GROUP2_Workspace/SarojQCResults/OandE/OandE%x.out
+#SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/SarojQCResults/OandE/OandE%x.err
+
+source $HOME/.bash_profile
+
+conda activate /shared/home/mbxss20/miniconda3/envs/Quastenv
+
+quast -r /shared/Project1_Resources/GROUP2_Workspace/SarojQCResults/Haloferax_volcanii_DS2_Ref/ncbi-genomes-2022-02-10/GCF_000025685.1_ASM2568v1_genomic.fna.gz --labels S1_QC,S5_QC,S6_QC,S7_QC,S8_QC --glimmer /shared/Project1_Resources/GROUP2_Workspace/lewis_unicycle_shortreads/H*/assembly*.fasta -o QCResults/ShortReadQC
+///////////////////////////////////////////////////////////////////////////////////////////////
