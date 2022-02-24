@@ -16,7 +16,7 @@ Our polished assemblies of both pass and pass/fail Nanopore data are located und
 
 ##General Info - Hybrid
 
-Hybrid scripts assemble both short and long-read data into complete assemblies. Our hybrid assemblies for samples one and five can be found under notation hybrid_SX.fasta, and the scripts used to produce them under notation hybrid_SX.sh. Hybrid assemblies polished with Pilon can be found under notation polished_hybrid.fasta. These polished assemblies are produced running the original hybrid assembly script, and are located in a folder titled pilon_polish/XXXX. 
+Hybrid scripts assemble both short and pass only long-read data into complete assemblies. Our hybrid assemblies for samples one and five can be found under notation hybrid_SX.fasta, and the scripts used to produce them under notation hybrid_SX.sh. Hybrid assemblies polished with Pilon can be found under notation polished_hybrid.fasta. These polished assemblies are produced running the original hybrid assembly script, and are located in a folder titled pilon_polish/XXXX. 
 
 ##General Info - QC
 The quality of our genome assemblies can be assessed by QUAST - scripts used to produce quality control outputs for unpolished and polished short-read assemblies can be found under notation QC_SR_SX.sh and polishedQC_SR_SX.sh respectively.
