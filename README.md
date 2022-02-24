@@ -35,7 +35,7 @@ Scripts used to produce quality control outputs for unpolished and polished hybr
 QC reports for our unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.fasta and polishedQChybrid.fasta respectively.
 
 ##General Info - Master
-The master script can be located in the repository as masterscript.sh. More specific instructions can be found in the file masterscript.README
+The master script can be located in the repository as masterscript.sh. More specific instructions can be found in the file masterscript_readme.txt
 
 Choose which method of assembly or quality control you wish to use - there are six potential approaches (and scripts - short-read, long-read pass only, long-read pass/fail, long-read pass only with polishing, hybrid, QC script)
 Delete the remaining five scripts to isolate your chosen method.
