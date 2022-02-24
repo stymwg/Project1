@@ -16,11 +16,9 @@ The QC for each polished assembly can be found under notation QC_medakaSX_LR.txt
 
 ##General Info - Hybrid
 Hybrid scripts assemble both short and long-read data into complete assemblies.
-Our one example hybrid assembly for sample five is entitled hybrid_S5.fasta, and can be found in the Hybrid branch.
+Our example hybrid assembly for sample five is entitled hybrid_S5.fasta, and can be found in the Hybrid branch.
 The script used to produce this hybrid assembly is called hybrid_S5.sh.
 
-##General Info - Prokka
-Prokka Genome annotations can also be found within the Prokka branch of this repository, for all of our assemblies.
 
 ##Prerequisites
 You have installed the correct versions of Unicycler (our short-read and hybrid assembler), FLYE (our long-read assembler), Medaka (our long-read polisher), QUAST (our short-read QC tool) and PROKKA (our genome annotator).
