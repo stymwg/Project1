@@ -33,9 +33,9 @@ Python version: 3.7.11
 Unicycler Version: v0.4.8
 FLYE version: 2.9-b1774
 Medaka version: 1.5.0
-Prokka Version:
-GitBash version:
+GitBash version: 1.8.3.1
 Conda version: 4.11.0
+Pilon-Polish: 1.24) 
 ##ChangeLog
 ...
 ##Contributors
