@@ -3,7 +3,7 @@
 ##General Info - Short Reads
 
 The four lanes of Illumina data can be concatenated using the command cat file1 file2 file3 file4 > new_sequence_file.
-The concatenated short-read sequence file path for both the first and second read mates can then be input into our short-read script - example short-read scripts can be found under SR_SX_script notation, where X is the sample number.
+The concatenated short-read sequence file path for both the first and second read mates can then be input to our short-read script - example short-read scripts can be found under SR_SX_script notation, where X is the sample number.
 Unpolished short read assemblies can be found under assembly_SR_SX.fasta notation. Assemblies polished with Pilon can be found under polished_SR_SX.fasta notation. These polished assemblies are produced running the original short-read assembly script, and are located in a folder titled pilon_polish/XXX
 
 ##General Info - Long Reads
