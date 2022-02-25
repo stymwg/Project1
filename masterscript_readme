@@ -100,7 +100,7 @@ Change the directories after the output and error variables to your chosen file 
 
 Memory and time settings are suitable for this script provided it is run on the .8 node of the 10.102.161 server, not the .7  node 
 
-Change the path after 'conda activate' to the file path to the provided yml file
+Change the path after 'conda activate' to the file path to the provided yml file - Quast.yml in the repository.
 
 The main command line starts with quast - this will call the program 
 
