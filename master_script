@@ -14,10 +14,10 @@ Short Read Script
 #SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/%x.err
 
 source $HOME/.bash_profile
-conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV #activates conda environment with unicycler installed
  
 unicycler -1 /shared/home/mbxlw2/Unicycler/S1/H164_S1_ALL_R1_001.fastq.gz \n
--2 /shared/home/mbxlw2/Unicycler/S1/H164_S1_ALL_R2_001.fastq.gz -o /shared/Project1_Resources/GROUP2_Workspace/H164_S1_ALL_lanes
+-2 /shared/home/mbxlw2/Unicycler/S1/H164_S1_ALL_R2_001.fastq.gz -o /shared/Project1_Resources/GROUP2_Workspace/H164_S1_ALL_lanes #runs unicycler using first and second mate short-read files, and outputs assembly into chosen directory
 
 
 //////////////////////////////
@@ -35,9 +35,9 @@ Flye Long-Read Pass Only
 #SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/lewis_flye/slurm.err
 
 source $HOME/.bash_profile
-conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/flye
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/flye #activates conda environment with flye installed
 
-python /shared/home/mbxlw2/Flye/bin/flye --nano-hq /shared/home/mbxlw2/Flye/pass_data/barcode01/* --out-dir /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/test
+python /shared/home/mbxlw2/Flye/bin/flye --nano-hq /shared/home/mbxlw2/Flye/pass_data/barcode01/* --out-dir /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/test #runs Flye on all passed long-read data within a chosen folder, and outputs long-read assembly into chosen directory
 
 /////////////////
 Flye long read polishing script
@@ -57,9 +57,9 @@ Flye long read polishing script
 
 source $HOME/.bash_profile
 
-conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/medaka
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/medaka #activates conda environment with medaka installed
 
-medaka_consensus -d /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/pass/barcode_1_fastq_pass/assembly.fasta -i /shared/home/mbxlw2/Flye/pass_data/barcode01/* -o /shared/Project1_Resources/GROUP2_Workspace/lewis_long_polishing -t 4 -m r941_min_hac_g507
+medaka_consensus -d /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/pass/barcode_1_fastq_pass/assembly.fasta -i /shared/home/mbxlw2/Flye/pass_data/barcode01/* -o /shared/Project1_Resources/GROUP2_Workspace/lewis_long_polishing -t 4 -m r941_min_hac_g507 #polishes long-read assembly and outputs polished assembly into chosen directory
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -78,11 +78,11 @@ Flye pass/fail long-read assembly script
 #SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/lewis_flye/barcode_1_fastq_fail/slurm.err
 
 source $HOME/.bash_profile
-conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/flye
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV/envs/flye #activates conda environment with flye installed
 
-python /shared/home/mbxlw2/Flye/bin/flye --nano-hq /shared/home/mbxlw2/Flye/pass_data/barcode01/* /shared/home/mbxlw2/Flye/fail_data/barcode01/* --out-dir /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/barcode_1_fastq_fail
+python /shared/home/mbxlw2/Flye/bin/flye --nano-hq /shared/home/mbxlw2/Flye/pass_data/barcode01/* /shared/home/mbxlw2/Flye/fail_data/barcode01/* --out-dir /shared/Project1_Resources/GROUP2_Workspace/lewis_flye/barcode_1_fastq_fail #builds long-read assemblies using both pass and fail data and outputs them into chosen directory
 ///////////////////////
-hybrid assembly script 
+Hybrid assembly script 
 ///////////////////////
 
 #!/bin/bash
@@ -96,9 +96,10 @@ hybrid assembly script
 #SBATCH --error=/shared/Project1_Resources/GROUP2_Workspace/hybrid_test/%x.err
 
 source $HOME/.bash_profile
-conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV
+conda activate /shared/home/mbxlw2/miniconda3/envs/unicyclerENV #activates conda environment with Unicycler installed
 
 unicycler -1 /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/H1804_S5_ALL_R1_001.fastq.gz -2 /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/H1804_S5_ALL_R2_001.fastq.gz -l /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/S5_merged_pass_only.fastq.gz -o /shared/Project1_Resources/GROUP2_Workspace/hybrid_test --spades_tmp_dir /shared/Project1_Resources/GROUP2_Workspace/hybrid_test/spades_assembly/read_correction/tmp
+#polishes first and second mate files for short-read with pass only long-read data using Unicycler and outputs hybrid assembly into chosen location
 //////////////////////
 QC script 
 /////////////////////
@@ -114,7 +115,7 @@ QC script
 
 source $HOME/.bash_profile
 
-conda activate /shared/home/mbxss20/miniconda3/envs/Quastenv
+conda activate /shared/home/mbxss20/miniconda3/envs/Quastenv #activates conda environment with Quast installed
 
-quast -r /shared/Project1_Resources/GROUP2_Workspace/SarojQCResults/Haloferax_volcanii_DS2_Ref/ncbi-genomes-2022-02-10/GCF_000025685.1_ASM2568v1_genomic.fna.gz --labels S1_QC,S5_QC,S6_QC,S7_QC,S8_QC --glimmer /shared/Project1_Resources/GROUP2_Workspace/lewis_unicycle_shortreads/H*/assembly*.fasta -o QCResults/ShortReadQC
+quast -r /shared/Project1_Resources/GROUP2_Workspace/SarojQCResults/Haloferax_volcanii_DS2_Ref/ncbi-genomes-2022-02-10/GCF_000025685.1_ASM2568v1_genomic.fna.gz --labels S1_QC,S5_QC,S6_QC,S7_QC,S8_QC --glimmer /shared/Project1_Resources/GROUP2_Workspace/lewis_unicycle_shortreads/H*/assembly*.fasta -o QCResults/ShortReadQC #produces quality control reports on our selected short-read assembly, and outputs into chosen location
 ///////////////////////////////////////////////////////////////////////////////////////////////
