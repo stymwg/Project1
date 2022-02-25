@@ -27,7 +27,7 @@ Hybrid scripts assemble both short and pass-only long-read data into complete as
 
 The quality of our genome assemblies can be assessed by QUAST - scripts used to produce quality control outputs for unpolished and polished short-read assemblies can be found under notation QC_SR_SX.sh and polishedQC_SR_SX.sh respectively.
 
-QC reports for our unpolished and polished short-read assemblies can also be located under notation QC_SR_SX.fasta and polishedQC_SR_SX.fasta respectively.
+QC reports for our unpolished and polished short-read assemblies can also be located under notation QC_SR.txt and polishedQC_SR.txt respectively.
 Scripts used to produce quality control outputs for unpolished and polished pass only long-read assemblies can be located under notation QC_LR_SX.sh and medakaQC_LR_SX.sh respectively.
 
 Scripts used to produce quality control outputs for unpolished and polished pass/fail long-read asssemblies can be located under notation passfailQC_LR_SX.sh and medakapassfailQC_LR_SX.sh respectively.
