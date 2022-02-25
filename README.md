@@ -25,17 +25,17 @@ Hybrid scripts assemble both short and pass-only long-read data into complete as
 
 ##General Info - QC
 
-The quality of our genome assemblies can be assessed by QUAST - scripts used to produce quality control outputs for unpolished and polished short-read assemblies can be found under notation QC_SR_SX.sh and polishedQC_SR_SX.sh respectively.
-QC reports for our unpolished and polished short-read assemblies can also be located under notation QC_LR.txt and polishedQC_LR.txt respectively.
+The quality of our genome assemblies can be assessed by QUAST - scripts used to produce quality control outputs for unpolished and polished short-read assemblies can be found under notation QC_SR.sh and polishedQC_SR.sh respectively.
+QC reports for our unpolished and polished short-read assemblies can also be located under notation QC_SR.txt and polishedQC_SR.txt respectively.
 
-Scripts used to produce quality control outputs for unpolished and polished pass-only long-read assemblies can be located under notation QC_LR_passonly.sh and polishedQC_LR_passonly.sh respectively. QC reports for our unpolished and polished pass-only long-read assemblies can be located under notation QC_LR_passonly.txt and polishedQC_LR_passonly.txt respectively.
+Scripts used to produce quality control outputs for unpolished and polished pass-only long-read assemblies can be located under notation QC_LR_passonly.sh and polishedQC_LR_passonly.sh respectively (NOT YET). QC reports for our unpolished and polished pass-only long-read assemblies can be located under notation QC_LR_passonly.txt and polishedQC_LR_passonly.txt respectively.
 
-Scripts used to produce quality control outputs for unpolished pass/fail long-read asssemblies can be located under notation QC_LR_passfail.sh.
+Scripts used to produce quality control outputs for unpolished pass/fail long-read asssemblies can be located under notation QC_LR_passfail.sh (NOT YET).
 QC reports for our unpolished pass/fail long-read assemblies can also be located under notation QC_LR_passfail.txt.
 
-Scripts used to produce quality control outputs for unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.sh and polishedQChybrid_SX.sh respectively.
+Scripts used to produce quality control outputs for unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.sh and polishedQChybrid_SX.sh respectively (NOT YET).
 
-QC reports for our unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.fasta and polishedQChybrid.fasta respectively.
+A QC report for both our unpolished and polished sample 5 hybrid assembly can be located under notation QChybrid_S1.txt and polishedQChybrid_S1.txt respectively.
 
 ##How to use the master script
 Choose which method of assembly or quality control you wish to use - there are six potential approaches (and scripts - short-read, long-read pass only, long-read pass/fail, long-read pass only with polishing, hybrid, QC script)
