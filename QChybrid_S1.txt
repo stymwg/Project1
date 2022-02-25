@@ -1,0 +1,58 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                        HybridTest   
+# contigs (>= 0 bp)             3            
+# contigs (>= 1000 bp)          3            
+# contigs (>= 5000 bp)          3            
+# contigs (>= 10000 bp)         3            
+# contigs (>= 25000 bp)         3            
+# contigs (>= 50000 bp)         3            
+Total length (>= 0 bp)          4006852      
+Total length (>= 1000 bp)       4006852      
+Total length (>= 5000 bp)       4006852      
+Total length (>= 10000 bp)      4006852      
+Total length (>= 25000 bp)      4006852      
+Total length (>= 50000 bp)      4006852      
+# contigs                       3            
+Largest contig                  3483828      
+Total length                    4006852      
+Reference length                4012900      
+GC (%)                          65.49        
+Reference GC (%)                65.48        
+N50                             3483828      
+NG50                            3483828      
+N75                             3483828      
+NG75                            3483828      
+L50                             1            
+LG50                            1            
+L75                             1            
+LG75                            1            
+# misassemblies                 6            
+# misassembled contigs          1            
+Misassembled contigs length     3483828      
+# local misassemblies           7            
+# scaffold gap ext. mis.        0            
+# scaffold gap loc. mis.        0            
+# unaligned mis. contigs        0            
+# unaligned contigs             0 + 1 part   
+Unaligned length                1351         
+Genome fraction (%)             99.709       
+Duplication ratio               1.001        
+# N's per 100 kbp               0.00         
+# mismatches per 100 kbp        29.42        
+# indels per 100 kbp            1.42         
+# predicted genes (unique)      3852         
+# predicted genes (>= 0 bp)     3897 + 0 part
+# predicted genes (>= 300 bp)   3352 + 0 part
+# predicted genes (>= 1500 bp)  445 + 0 part 
+# predicted genes (>= 3000 bp)  30 + 0 part  
+Largest alignment               1194240      
+Total aligned length            4002576      
+NA50                            1096079      
+NGA50                           1096079      
+NA75                            437935       
+NGA75                           437935       
+LA50                            2            
+LGA50                           2            
+LA75                            4            
+LGA75                           4            
