@@ -17,11 +17,11 @@ Long-read Nanopore pass data can be input into our long-read scripts (under nota
 Both pass and fail long-read data can also be input together into long-read scripts - an example is located under notation passfail_assembly_LR_S1.bash.
 Our assemblies constructed using both pass and fail data can be found under S1_passandfail.fasta notation.
 Long-read assemblies can be polished using Medaka - simply input the filepath to your assemblies and Nanopore data to one of our example scripts - pass-only polishing scripts are located under notation medaka_LR_SX.sh.
-Our polished assemblies of both pass and pass/fail Nanopore data are located under medaka_LR_SX.fasta and medaka_passfail_LR_SX.fasta respectively.
+Our polished assemblies of pass-only Nanopore data are located under medaka_LR_SX.fasta notation.
 
 ##General Info - Hybrid
 
-Hybrid scripts assemble both short and pass only long-read data into complete assemblies. Our hybrid assemblies for samples one and five can be found under notation hybrid_SX.fasta, and the scripts used to produce them under notation hybrid_SX.sh. Hybrid assemblies polished with Pilon can be found under notation polished_hybrid.fasta. These polished assemblies are produced running the original hybrid assembly script, and are located in a folder titled pilon_polish/0_insert_size_check.fasta 
+Hybrid scripts assemble both short and pass-only long-read data into complete assemblies. Our hybrid assemblies for samples one and five can be found under notation hybrid_SX.fasta, and the scripts used to produce them under notation hybrid_SX.sh. Hybrid assemblies polished with Pilon can be found under notation polished_hybrid.fasta. These polished assemblies are produced running the original hybrid assembly script, and are located in a folder titled pilon_polish/0_insert_size_check.fasta 
 
 ##General Info - QC
 The quality of our genome assemblies can be assessed by QUAST - scripts used to produce quality control outputs for unpolished and polished short-read assemblies can be found under notation QC_SR_SX.sh and polishedQC_SR_SX.sh respectively.
