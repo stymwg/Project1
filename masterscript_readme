@@ -1,4 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+First copy and paste the masterscript into a text editor (e.g. Notepad++) and save the file as masterscript.txt
+Then delete all scripts you do not wish to use, follow the instructions below to modify each script for your data, and run using the command sbatch masterscript.txt on the Azure Cloud Compute server 10.102.161.8
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ###Short Read Script
 
 Change the jobname variable to a name of your choice 
