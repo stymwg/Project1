@@ -26,20 +26,18 @@ Hybrid scripts assemble both short and pass-only long-read data into complete as
 ##General Info - QC
 
 The quality of our genome assemblies can be assessed by QUAST - scripts used to produce quality control outputs for unpolished and polished short-read assemblies can be found under notation QC_SR_SX.sh and polishedQC_SR_SX.sh respectively.
+QC reports for our unpolished and polished short-read assemblies can also be located under notation QC_LR.txt and polishedQC_LR.txt respectively.
 
-QC reports for our unpolished and polished short-read assemblies can also be located under notation QC_SR.txt and polishedQC_SR.txt respectively.
-Scripts used to produce quality control outputs for unpolished and polished pass only long-read assemblies can be located under notation QC_LR_SX.sh and medakaQC_LR_SX.sh respectively.
+Scripts used to produce quality control outputs for unpolished and polished pass-only long-read assemblies can be located under notation QC_LR_SX.sh and medakaQC_LR_SX.sh respectively. QC reports for our unpolished and polished pass-only long-read assemblies can be located under notation QC_LR_SX.fasta and polishedQC_LR_SX.fasta respectively.
 
 Scripts used to produce quality control outputs for unpolished and polished pass/fail long-read asssemblies can be located under notation passfailQC_LR_SX.sh and medakapassfailQC_LR_SX.sh respectively.
-
-QC reports for our unpolished and polished pass only long-read assemblies can be located under notation QC_LR_SX.fasta and polishedQC_LR_SX.fasta respectively.
-
 QC reports for our unpolished and polished pass/fail long-read assemblies can also be located under notation passfailQC_LR_SX.fasta and passfailQC_LR_SX.fasta respectively.
 
 Scripts used to produce quality control outputs for unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.sh and polishedQChybrid_SX.sh respectively.
 
 QC reports for our unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.fasta and polishedQChybrid.fasta respectively.
 
+##How to use the master script
 Choose which method of assembly or quality control you wish to use - there are six potential approaches (and scripts - short-read, long-read pass only, long-read pass/fail, long-read pass only with polishing, hybrid, QC script)
 Delete the remaining five scripts to isolate your chosen method.
 
@@ -48,6 +46,12 @@ Run the following command in Git Bash: sbatch [the name of script you wish to ru
 ##Prerequisites You have installed the correct versions of Unicycler (our short-read and hybrid assembler), FLYE (our long-read assembler), Medaka (our long-read polisher) and QUAST (our QC tool).
 You have two folders, one containing short-read Illumina data and the other containing long-read Nanopore data. Ensure the working directory within the server is shared/
 
-##Setup Run the following command in Git Bash: sbatch [the name of script you wish to run - for example to run the master script, this is master_script.sh.] ##Technologies Python version: 3.7.11 Unicycler Version: 0.4.8 FLYE version: 2.9-b1774 Medaka version: 1.5.0 GitBash version: 1.8.3.1 Conda version: 4.11.0 Pilon-Polish: 1.24) ##ChangeLog ... ##Contributors Matthew Gaskins Lewis Wood Saroj Sharma
+##Setup Run the following command in Git Bash: sbatch [the name of script you wish to run - for example to run the master script, this is master_script.sh.]
+
+##Technologies Python version: 3.7.11 Unicycler Version: 0.4.8 FLYE version: 2.9-b1774 Medaka version: 1.5.0 GitBash version: 1.8.3.1 Conda version: 4.11.0 Pilon-Polish: 1.24)
+
+##ChangeLog ...
+
+##Contributors Matthew Gaskins Lewis Wood Saroj Sharma
 
 ##Contact stymwg@nottingham.ac.uk
