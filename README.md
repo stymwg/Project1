@@ -1,5 +1,10 @@
 ##All assemblies and scripts can be located on the Azure Cloud Compute server 10.102.161.8 - use command ssh -i putty_key your_username@10.102.161.8 to access.
 
+
+##General Info - Master
+The master script can be located in the repository as masterscript.sh. More specific instructions can be found in the file masterscript_readme.txt
+
+
 ##General Info - Short Reads
 
 The four lanes of Illumina data can be concatenated using the command cat file1 file2 file3 file4 > new_sequence_file.
@@ -33,9 +38,6 @@ QC reports for our unpolished and polished pass/fail long-read assemblies can al
 Scripts used to produce quality control outputs for unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.sh and polishedQChybrid_SX.sh respectively.
 
 QC reports for our unpolished and polished hybrid assemblies can be located under notation QChybrid_SX.fasta and polishedQChybrid.fasta respectively.
-
-##General Info - Master
-The master script can be located in the repository as masterscript.sh. More specific instructions can be found in the file masterscript_readme.txt
 
 Choose which method of assembly or quality control you wish to use - there are six potential approaches (and scripts - short-read, long-read pass only, long-read pass/fail, long-read pass only with polishing, hybrid, QC script)
 Delete the remaining five scripts to isolate your chosen method.
