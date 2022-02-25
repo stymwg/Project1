@@ -1,0 +1,58 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                        S1_QC          S5_QC          S6_QC          S7_QC          S8_QC        
+# contigs (>= 0 bp)             3              3              3              3              3            
+# contigs (>= 1000 bp)          3              3              3              3              3            
+# contigs (>= 5000 bp)          3              3              3              3              3            
+# contigs (>= 10000 bp)         3              3              3              3              3            
+# contigs (>= 25000 bp)         3              3              3              3              3            
+# contigs (>= 50000 bp)         3              3              3              3              3            
+Total length (>= 0 bp)          4007636        4004927        4003870        4003814        4003448      
+Total length (>= 1000 bp)       4007636        4004927        4003870        4003814        4003448      
+Total length (>= 5000 bp)       4007636        4004927        4003870        4003814        4003448      
+Total length (>= 10000 bp)      4007636        4004927        4003870        4003814        4003448      
+Total length (>= 25000 bp)      4007636        4004927        4003870        4003814        4003448      
+Total length (>= 50000 bp)      4007636        4004927        4003870        4003814        4003448      
+# contigs                       3              3              3              3              3            
+Largest contig                  3484793        3482153        3481147        3481049        3480707      
+Total length                    4007636        4004927        4003870        4003814        4003448      
+Reference length                4012900        4012900        4012900        4012900        4012900      
+GC (%)                          65.48          65.49          65.49          65.49          65.48        
+Reference GC (%)                65.48          65.48          65.48          65.48          65.48        
+N50                             3484793        3482153        3481147        3481049        3480707      
+NG50                            3484793        3482153        3481147        3481049        3480707      
+N75                             3484793        3482153        3481147        3481049        3480707      
+NG75                            3484793        3482153        3481147        3481049        3480707      
+L50                             1              1              1              1              1            
+LG50                            1              1              1              1              1            
+L75                             1              1              1              1              1            
+LG75                            1              1              1              1              1            
+# misassemblies                 6              6              8              8              8            
+# misassembled contigs          1              1              1              1              1            
+Misassembled contigs length     3484793        3482153        3481147        3481049        3480707      
+# local misassemblies           3              7              7              7              7            
+# scaffold gap ext. mis.        0              0              0              0              0            
+# scaffold gap loc. mis.        0              0              0              0              0            
+# unaligned mis. contigs        0              0              0              0              0            
+# unaligned contigs             0 + 1 part     0 + 1 part     0 + 1 part     0 + 1 part     0 + 1 part   
+Unaligned length                1344           1349           1507           1485           1505         
+Genome fraction (%)             99.770         99.709         99.692         99.680         99.673       
+Duplication ratio               1.001          1.001          1.000          1.001          1.001        
+# N's per 100 kbp               0.00           0.00           0.00           0.00           0.00         
+# mismatches per 100 kbp        5.10           7.92           7.90           8.00           8.48         
+# indels per 100 kbp            38.56          48.56          60.09          51.42          60.28        
+# predicted genes (unique)      4085           4117           4189           4136           4205         
+# predicted genes (>= 0 bp)     4113 + 3 part  4145 + 2 part  4214 + 2 part  4163 + 1 part  4233 + 1 part
+# predicted genes (>= 300 bp)   3447 + 3 part  3454 + 1 part  3490 + 1 part  3475 + 1 part  3495 + 1 part
+# predicted genes (>= 1500 bp)  383 + 0 part   374 + 0 part   343 + 0 part   359 + 1 part   343 + 0 part 
+# predicted genes (>= 3000 bp)  15 + 0 part    18 + 0 part    16 + 0 part    15 + 0 part    16 + 0 part  
+Largest alignment               1646467        1645018        1457521        970247         1283949      
+Total aligned length            4003367        4000648        3999434        4002160        3999014      
+NA50                            1194279        1078690        1018917        674267         825154       
+NGA50                           1194279        1078690        1018917        674267         825154       
+NA75                            437776         437707         431100         437700         366180       
+NGA75                           437776         437707         431100         431131         366180       
+LA50                            2              2              2              3              2            
+LGA50                           2              2              2              3              2            
+LA75                            3              3              4              4              5            
+LGA75                           3              3              4              5              5            
