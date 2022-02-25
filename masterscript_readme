@@ -12,7 +12,7 @@ After 'conda activate', change the name of the path to the path to your conda en
 
 After 'unicycler -1', change the file path to where your concatenated short-read first mate file is located.
 Short-reads from all four lanes must be concatenated using the command(if your sequence is in multiple files you must 
-cat file1 file2 file3 file 4> new_sequence_file, then use the new_sequence_file path to this catted file after 'unicycler -l'
+cat file1 file2 file3 file4 > new_sequence_file, then input the new_sequence_file path to this concatenated file after 'unicycler -l'
 
 After '-2', add the path to your second mate short-read file, which must also be a concatenated file of all four lane reads 
 
