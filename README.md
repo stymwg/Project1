@@ -32,6 +32,7 @@ QC reports for our unpolished pass/fail long-read assemblies can also be located
 A QC report for both our unpolished and polished sample 1 hybrid assembly can be located under notation QChybrid_S1.txt and polishedQChybrid_S1.txt respectively.
 
 ##How to use the master script
+
 Choose which method of assembly or quality control you wish to use - there are six potential approaches (and scripts - short-read, long-read pass only, long-read pass/fail, long-read pass only with polishing, hybrid, QC script)
 Delete the remaining five scripts to isolate your chosen method.
 
